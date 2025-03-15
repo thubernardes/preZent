@@ -1,8 +1,10 @@
-<div>
-    <h2>Cadastro</h2>
+<div class="cadastro-container">
     <form (ngSubmit)="cadastrar()">
       <label for="isAluno">É aluno?</label>
       <input type="checkbox" id="isAluno" [(ngModel)]="isAluno" name="isAluno">
+      
+      <!-- Texto indicativo em cinza, caso seja professor -->
+      <span class="informativo">Se for Professor não é necessário marcar a opção "É aluno".</span>
       
       <label for="nome">Nome:</label>
       <input type="text" id="nome" [(ngModel)]="nome" name="nome" required>
@@ -16,3 +18,4 @@
       <button type="submit">Cadastrar</button>
     </form>
   </div>
+  

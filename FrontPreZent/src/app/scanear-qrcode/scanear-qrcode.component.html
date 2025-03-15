@@ -1,9 +1,10 @@
-<div>
+<div class="scanear-container">
     <h2>Scanear QrCode</h2>
     <form (ngSubmit)="scanear()">
       <label for="classId">ID da Classe:</label>
       <input type="text" id="classId" [(ngModel)]="classId" name="classId" required>
-      
+  
       <button type="submit">Scanear</button>
     </form>
   </div>
+  

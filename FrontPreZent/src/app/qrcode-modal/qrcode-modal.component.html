@@ -1,6 +1,8 @@
-<div>
+<div class="modal-container">
+    <button class="close-btn" (click)="closeModal()">X</button>
     <h2>QrCode Gerado</h2>
-    <img [src]="'data:image/png;base64,' + data.qrCode" alt="QrCode">
-
+    <img [src]="'data:image/png;base64,' + data.qrCode" alt="QrCode" class="qr-code-img">
+    
     <p>Class ID: {{ data.classId }}</p>
   </div>
+  
