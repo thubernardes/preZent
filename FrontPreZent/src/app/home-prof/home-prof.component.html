@@ -1,0 +1,20 @@
+<div>
+    <button (click)="navigateToGerarQrcode()">Gerar QrCode</button>
+  </div>
+  
+  <h2>Lista de Classes</h2>
+  <ul>
+    <li *ngFor="let classe of classes" (click)="getAlunosPorClasse(classe.classId)">
+      {{ classe.nomeDaClasse }} - Duração: {{ classe.duracao }} min
+    </li>
+  </ul>
+  
+  <div *ngIf="selectedClassId">
+    <h3>Alunos que participaram da aula:</h3>
+    <ul>
+      <li *ngFor="let aluno of alunos">
+        {{ aluno.nome }}
+      </li>
+    </ul>
+  </div>
+  
